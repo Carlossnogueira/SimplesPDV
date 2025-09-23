@@ -8,6 +8,7 @@ public class Sale
     public DateTime CreatedAt { get; set; }
     public DateTime ModifiedAt { get; set; }
     public PaymentType PaymentType { get; set; }
+    public Boolean IsCancelled { get; set; }
     
     public ICollection<SaleItem> Items { get; set; } =  new List<SaleItem>();
 }

@@ -8,6 +8,7 @@ public class Product
     public decimal Price { get; set; }
     public DateTime CreatedAt { get; set; }
     public DateTime ModifiedAt { get; set; }
+    public bool IsDeleted { get; set; }
     
     public ICollection<SaleItem> SaleItems { get; set; } = new List<SaleItem>();
 }

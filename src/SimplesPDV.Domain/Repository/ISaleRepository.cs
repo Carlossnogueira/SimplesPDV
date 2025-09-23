@@ -7,4 +7,5 @@ public interface ISaleRepository
     Task<List<Product>> GetByDate(DateOnly date);
     Task Update(long id, Sale sale);
     Task Delete(long id);
+    Task CancelSale(long id);
 }
