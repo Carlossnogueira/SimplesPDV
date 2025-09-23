@@ -22,7 +22,13 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\SimplesPDV.Communication\SimplesPDV.Communication.csproj" />
+      <ProjectReference Include="..\SimplesPDV.Exception\SimplesPDV.Exception.csproj" />
       <ProjectReference Include="..\SimplesPDV.Infrastructure\SimplesPDV.Infrastructure.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Controllers\" />
     </ItemGroup>
 
 </Project>

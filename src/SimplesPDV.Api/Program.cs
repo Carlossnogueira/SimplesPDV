@@ -1,3 +1,5 @@
+using SimplesPDV.Api.Filter;
+using SimplesPDV.Exception;
 using SimplesPDV.Infrastructure;
 
 namespace SimplesPDV.Api;
@@ -10,6 +12,7 @@ public class Program
 
         // Add services to the container.
 
+        builder.Services.AddMvc(options => options.Filters.Add(typeof(ExceptionFilter)));
         builder.Services.AddControllers();
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         builder.Services.AddEndpointsApiExplorer();
