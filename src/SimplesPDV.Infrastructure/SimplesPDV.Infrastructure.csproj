@@ -6,4 +6,14 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.9" />
+      <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.4" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\SimplesPDV.Application\SimplesPDV.Application.csproj" />
+      <ProjectReference Include="..\SimplesPDV.Domain\SimplesPDV.Domain.csproj" />
+    </ItemGroup>
+
 </Project>

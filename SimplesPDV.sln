@@ -1,10 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimplesPDV.Api", "src\SimplesPDV.Api\SimplesPDV.Api.csproj", "{2061CF5E-7C52-4295-90B5-60412FDCFF18}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimplesPDV.Communication", "src\SimplesPDV.Communication\SimplesPDV.Communication.csproj", "{C22937C9-4F0B-4308-9F05-9E7B241CA224}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimplesPDV.Model", "src\SimplesPDV.Model\SimplesPDV.Model.csproj", "{8BBBBCE9-A329-44D1-8972-28053AA3592B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimplesPDV.Domain", "src\SimplesPDV.Domain\SimplesPDV.Domain.csproj", "{8BBBBCE9-A329-44D1-8972-28053AA3592B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimplesPDV.Infrastructure", "src\SimplesPDV.Infrastructure\SimplesPDV.Infrastructure.csproj", "{F64BF4AA-AC97-4BA4-862E-ECD3FB479B71}"
 EndProject
@@ -12,16 +10,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimplesPDV.Exception", "src
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimplesPDV.Application", "src\SimplesPDV.Application\SimplesPDV.Application.csproj", "{0327C302-4BA9-456B-AC42-EA0B76C3176D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimplesPDV.Api", "src\SimplesPDV.Api\SimplesPDV.Api.csproj", "{EB83699E-AAE3-443D-BDDF-BF36D57A1178}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2061CF5E-7C52-4295-90B5-60412FDCFF18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2061CF5E-7C52-4295-90B5-60412FDCFF18}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2061CF5E-7C52-4295-90B5-60412FDCFF18}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2061CF5E-7C52-4295-90B5-60412FDCFF18}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C22937C9-4F0B-4308-9F05-9E7B241CA224}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C22937C9-4F0B-4308-9F05-9E7B241CA224}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C22937C9-4F0B-4308-9F05-9E7B241CA224}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -42,5 +38,9 @@ Global
 		{0327C302-4BA9-456B-AC42-EA0B76C3176D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0327C302-4BA9-456B-AC42-EA0B76C3176D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0327C302-4BA9-456B-AC42-EA0B76C3176D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB83699E-AAE3-443D-BDDF-BF36D57A1178}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB83699E-AAE3-443D-BDDF-BF36D57A1178}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB83699E-AAE3-443D-BDDF-BF36D57A1178}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB83699E-AAE3-443D-BDDF-BF36D57A1178}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
