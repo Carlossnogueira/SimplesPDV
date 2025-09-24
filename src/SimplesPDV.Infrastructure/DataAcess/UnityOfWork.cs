@@ -2,8 +2,13 @@ namespace SimplesPDV.Infrastructure;
 
 public class UnityOfWork : Domain.Repository.IUnityOfWork
 {
-    public Task Commit()
+    private readonly SimplesPDVContext _context;
+
+    public UnityOfWork(SimplesPDVContext context)
     {
-        throw new NotImplementedException();
+        _context = context;
     }
+
+    public Task Commit() => _context.SaveChangesAsync();
+    
 }

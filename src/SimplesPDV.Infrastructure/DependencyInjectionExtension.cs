@@ -11,6 +11,8 @@ public static class DependencyInjectionExtension
     public static void AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
     {
         AddDbContext(services, configuration);
+        AddRepositories(services);
+        AddUnityOfWork(services);
     }
 
     private static void AddRepositories(this IServiceCollection services)
@@ -23,5 +25,10 @@ public static class DependencyInjectionExtension
         var connectionString = configuration.GetConnectionString("DefaultConnection");
         services.AddDbContext<SimplesPDVContext>(config => config.UseNpgsql(connectionString));
     }
-    
+
+    private static void AddUnityOfWork(this IServiceCollection services)
+    {
+        services.AddScoped<IUnityOfWork, UnityOfWork>();
+    }
+
 }

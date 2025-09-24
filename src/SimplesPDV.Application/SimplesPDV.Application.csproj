@@ -6,4 +6,16 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="FluentValidation" Version="12.0.0" />
+      <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="10.0.0-rc.1.25451.107" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.0-rc.1.25451.107" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\SimplesPDV.Communication\SimplesPDV.Communication.csproj" />
+      <ProjectReference Include="..\SimplesPDV.Domain\SimplesPDV.Domain.csproj" />
+      <ProjectReference Include="..\SimplesPDV.Exception\SimplesPDV.Exception.csproj" />
+    </ItemGroup>
+
 </Project>

@@ -1,0 +1,14 @@
+using FluentValidation;
+using SimplesPDV.Communication.Request;
+
+namespace SimplesPDV.Application.Services.Product.Create;
+
+public class CreateProductValidator : AbstractValidator<RequestProductJson>
+{
+    public CreateProductValidator()
+    {
+        RuleFor(p =>  p.Name).NotEmpty().WithMessage("Name is required");
+        RuleFor(p=>p.Price).GreaterThan(0).WithMessage("Price must be greater than 0");
+        RuleFor(p=>p.Quantity).GreaterThanOrEqualTo(1).WithMessage("Quantity is required and greater than 1");
+    }
+}

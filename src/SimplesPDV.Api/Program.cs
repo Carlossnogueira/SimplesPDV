@@ -1,4 +1,5 @@
 using SimplesPDV.Api.Filter;
+using SimplesPDV.Application;
 using SimplesPDV.Exception;
 using SimplesPDV.Infrastructure;
 
@@ -19,6 +20,7 @@ public class Program
         builder.Services.AddSwaggerGen();
         
         builder.Services.AddInfrastructure(builder.Configuration);
+        builder.Services.AddApplication(builder.Configuration);
 
         var app = builder.Build();
 
