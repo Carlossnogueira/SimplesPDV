@@ -16,6 +16,7 @@ public static class DependencyInjectionExtension
     {
         services.AddScoped<ICreateProductService, CreateProductService>();
         services.AddScoped<IGetAllProductService, GetAllProducts>();
+        services.AddScoped<IGetPaginatedProducts, GetPaginatedProducts>();
     }
 
 }
