@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SimplesPDV.Application.Services.Product.Create;
+using SimplesPDV.Application.Services.Product.GetAll;
 using SimplesPDV.Communication.Request;
 using SimplesPDV.Communication.Response;
 
@@ -18,6 +19,14 @@ namespace SimplesPDV.Api.Controllers
         {
             var response = await service.Execute(request);
             return Created(string.Empty, response);
+        }
+
+        [HttpGet]
+        [ProducesResponseType(typeof(AllProductsResponseJson), StatusCodes.Status200OK)]
+        public async Task<IActionResult> GetAll([FromServices] IGetAllProductService service)
+        {
+            var response = await service.Execute();
+            return Ok(response);
         }
         
     }

@@ -1,16 +1,17 @@
 using SimplesPDV.Communication.Request;
 using SimplesPDV.Communication.Response;
 using SimplesPDV.Domain.Repository;
+using SimplesPDV.Domain.Repository.Product;
 using SimplesPDV.Exception.Validation;
 
 namespace SimplesPDV.Application.Services.Product.Create;
 
 public class CreateProductService : ICreateProductService
 {
-    private readonly IProductRepository  _repository;
+    private readonly IProductWriteOnlyRepository  _repository;
     private readonly IUnityOfWork _unityOfWork;
 
-    public CreateProductService(IProductRepository productRepository, IUnityOfWork unityOfWork)
+    public CreateProductService(IProductWriteOnlyRepository productRepository, IUnityOfWork unityOfWork)
     {
         _repository = productRepository;
         _unityOfWork = unityOfWork;

@@ -21,7 +21,17 @@ public class Program
         
         builder.Services.AddInfrastructure(builder.Configuration);
         builder.Services.AddApplication(builder.Configuration);
-
+        
+        
+        // opening cors
+        builder.Services.AddCors(options =>
+        {
+            options.AddPolicy("AllowAll",
+                policy => policy.AllowAnyOrigin()
+                                .AllowAnyMethod()
+                                .AllowAnyHeader());
+        });
+        
         var app = builder.Build();
 
         // Configure the HTTP request pipeline.
@@ -29,10 +39,11 @@ public class Program
         {
             app.UseSwagger();
             app.UseSwaggerUI();
+           
         }
 
         app.UseHttpsRedirection();
-
+        app.UseCors("AllowAll");
         app.UseAuthorization();
 
 

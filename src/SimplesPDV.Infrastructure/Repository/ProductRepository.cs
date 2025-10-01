@@ -1,10 +1,11 @@
 using Microsoft.EntityFrameworkCore;
 using SimplesPDV.Domain;
 using SimplesPDV.Domain.Repository;
+using SimplesPDV.Domain.Repository.Product;
 
 namespace SimplesPDV.Infrastructure.Repository;
 
-public class ProductRepository : IProductRepository
+public class ProductRepository : IProductReadOnlyRepository, IProductWriteOnlyRepository
 {
 
     public readonly SimplesPDVContext _context;
@@ -21,7 +22,7 @@ public class ProductRepository : IProductRepository
 
     public async Task<List<Product>> GetAllActiveAsync()
     {
-        return await _context.Products.Where(p => !p.IsDeleted).ToListAsync();
+        return await _context.Products.Where(p => !p.IsDeleted).AsNoTracking().ToListAsync();
     }
 
     public async Task<List<Product>> GetAllIncluingDeletedAsync()

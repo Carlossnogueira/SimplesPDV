@@ -1,7 +1,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using SimplesPDV.Application.Services.Product.Create;
-using SimplesPDV.Domain.Repository;
+using SimplesPDV.Application.Services.Product.GetAll;
 
 namespace SimplesPDV.Application;
 
@@ -15,6 +15,7 @@ public static class DependencyInjectionExtension
     private static void AddUseCases(this IServiceCollection services)
     {
         services.AddScoped<ICreateProductService, CreateProductService>();
+        services.AddScoped<IGetAllProductService, GetAllProducts>();
     }
 
 }
