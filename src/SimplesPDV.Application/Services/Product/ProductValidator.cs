@@ -3,9 +3,9 @@ using SimplesPDV.Communication.Request;
 
 namespace SimplesPDV.Application.Services.Product.Create;
 
-public class CreateProductValidator : AbstractValidator<RequestProductJson>
+public class ProductValidator : AbstractValidator<RequestProductJson>
 {
-    public CreateProductValidator()
+    public ProductValidator()
     {
         RuleFor(p =>  p.Name).NotEmpty().WithMessage("Name is required");
         RuleFor(p=>p.Price).GreaterThan(0).WithMessage("Price must be greater than 0");
